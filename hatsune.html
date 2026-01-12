@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mirai Nikki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Vídeo de fundo */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Conteúdo */
+        #conteudo {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .btn {
+            background: rgba(0,0,0,0.85);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            width: 90px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop playsinline id="video-bg">
+        <source src="fundo.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+
+    <!-- Conteúdo -->
+    <div id="conteudo">
+        <h2>Ligar a máquina de Mirai Nikki?</h2>
+
+        <div>
+            <button class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onmouseover="desvia(this)">NÃO</button>
+        </div>
+    </div>
+
+    <script>
+        function sim() {
+            alert("VC LIGOU A MAQUINA DE MIRAI NIKKI 😈");
+            window.location.href = "https://x.com/zVictorGamer280/status/2010552562563645441?s=20";
+        }
+
+        function desvia(btn) {
+            btn.style.position = "absolute";
+            btn.style.left = Math.random() * 80 + "%";
+            btn.style.top = Math.random() * 80 + "%";
+        }
+    </script>
+
+</body>
+</html> 
